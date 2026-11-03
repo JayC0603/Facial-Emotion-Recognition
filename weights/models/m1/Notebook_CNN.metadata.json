@@ -1,0 +1,39 @@
+{
+  "format": "fer_pipeline_onnx_v1",
+  "backend": "onnxruntime",
+  "model_name": "notebook_cnn_1m",
+  "model_family": "custom_cnn",
+  "input_size": 64,
+  "input_channels": 1,
+  "color_mode": "grayscale",
+  "num_classes": 7,
+  "labels": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "normalization": {
+    "mean": [
+      0.5
+    ],
+    "std": [
+      0.5
+    ]
+  },
+  "source_checkpoint": "C:\\Users\\Admin\\Documents\\IMP302c-Lab01\\FER_Pipeline_Inference\\FER_Pipeline_Inference\\weights\\models\\m1\\Notebook_CNN_best_model.pth",
+  "checkpoint_epoch": 56,
+  "opset": 17,
+  "dynamic_batch": true,
+  "parity": {
+    "input_source": "gaussian_random",
+    "batch_size": 4,
+    "max_abs_error": 1.3113021850585938e-06,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "top1_equal": true
+  }
+}

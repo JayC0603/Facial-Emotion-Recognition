@@ -1,0 +1,15 @@
+{
+  "model": "notebook_efficientnet_b0",
+  "input_size": 64,
+  "model_internal_size": 160,
+  "num_classes": 7,
+  "seed": 42,
+  "checkpoint_policy": "best FER validation accuracy with EMA",
+  "checkpoint_epoch": 19,
+  "test_accuracy": 0.7203956533853441,
+  "test_macro_f1": 0.7131,
+  "labels": ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"],
+  "normalization": {"mean": [0.5], "std": [0.5]},
+  "color_mode": "grayscale",
+  "architecture": "exact efficientnetb0.ipynb grayscale EfficientNet-B0"
+}

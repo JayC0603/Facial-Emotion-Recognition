@@ -1,0 +1,57 @@
+project:
+  name: fer_lab
+  seed: 42
+  num_classes: 7
+labels:
+- angry
+- disgust
+- fear
+- happy
+- neutral
+- sad
+- surprise
+runtime:
+  face_detector: yunet
+  face_detection_score_threshold: 0.8
+  face_nms_threshold: 0.3
+  face_top_k: 50
+  face_crop_padding_ratio: 0.1
+  emotion_backend_priority:
+  - onnxruntime
+  - pytorch
+  confidence_threshold: 0.5
+  target_cpu_fps:
+    mandatory: 10
+    preferred: 15
+  batch_faces: true
+  video_codec: mp4v
+  onnx_intra_op_threads: 4
+  temporal_stabilization: true
+  tracking_iou_threshold: 0.3
+  tracking_max_missed_frames: 10
+  emotion_ema_alpha: 0.55
+  stream_reconnect_initial_seconds: 0.5
+  stream_reconnect_max_seconds: 5.0
+  stream_frame_timeout_seconds: 10.0
+  stream_record_fps: 30.0
+  face_detector_max_side: 640
+  opencv_num_threads: 4
+  torch_num_threads: 4
+  torch_channels_last: true
+  torch_amp: auto
+  cuda_pin_memory: true
+  cuda_cudnn_benchmark: true
+  cuda_allow_tf32: true
+  auto_backend_policy:
+    cpu: onnxruntime_then_pytorch
+    cuda: pytorch_fp16_then_explicit_onnxruntime_cuda
+logging:
+  progress_bar: true
+  progress_backend: tqdm
+experiments:
+  p4:
+    final_resolution: 64
+portable:
+  default: EfficientNet-B0 notebook checkpoint
+  fallback: CNN notebook checkpoint
+  dataset_required: false

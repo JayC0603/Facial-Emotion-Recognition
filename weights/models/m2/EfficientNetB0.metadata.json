@@ -1,0 +1,39 @@
+{
+  "format": "fer_pipeline_onnx_v1",
+  "backend": "onnxruntime",
+  "model_name": "notebook_efficientnet_b0",
+  "model_family": "transfer",
+  "input_size": 64,
+  "input_channels": 1,
+  "color_mode": "grayscale",
+  "num_classes": 7,
+  "labels": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "normalization": {
+    "mean": [
+      0.5
+    ],
+    "std": [
+      0.5
+    ]
+  },
+  "source_checkpoint": "C:\\Users\\Admin\\Documents\\IMP302c-Lab01\\FER_Pipeline_Inference\\FER_Pipeline_Inference\\weights\\models\\m2\\EfficientNetB0_best_model.pth",
+  "checkpoint_epoch": 19,
+  "opset": 17,
+  "dynamic_batch": true,
+  "parity": {
+    "input_source": "gaussian_random",
+    "batch_size": 4,
+    "max_abs_error": 1.1086463928222656e-05,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "top1_equal": true
+  }
+}

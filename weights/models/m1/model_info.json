@@ -1,0 +1,14 @@
+{
+  "model": "notebook_cnn_1m",
+  "input_size": 64,
+  "num_classes": 7,
+  "checkpoint": "Notebook_CNN_best_model.pth",
+  "checkpoint_epoch": 56,
+  "parameters": 1003935,
+  "test_accuracy": 0.68431317915854,
+  "test_macro_f1": 0.6600328725253347,
+  "labels": ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"],
+  "color_mode": "grayscale",
+  "normalization": {"mean": [0.5], "std": [0.5]},
+  "source_notebook": "Notebook_CNN.ipynb"
+}
