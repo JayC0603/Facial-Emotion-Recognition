@@ -20,11 +20,6 @@
 </div>
 
 ---
-
-| 👨‍🎓 Sinh viên | 🪪 Mã số sinh viên | 📚 Bài thực hành |
-|:---:|:---:|:---:|
-| **Nguyễn Minh Chánh** | **CE180818** | **IMP302 — Lab 01** |
-
 > [!NOTE]
 > Dự án đã kèm trọng số CNN, EfficientNet-B0 và YuNet. Sau khi cài thư viện, bạn có thể chạy suy luận mà không cần dataset huấn luyện.
 
